@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+/**
+ * Print stylesheet for yourwebsite.com
+* @version         1.0
+* @lastmodified    16.06.2016
+*/
+
+@media print {
+   #page {
+  display: grid;
+  width: 100%;
+  height:100%;
+  grid-template-areas: "nav nav nav ."
+                       "head . main main"
+                       "foot foot foot foot";
+  grid-template-rows: repeat(autofit);
+  grid-template-columns: repeat(autofit);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  background-color: rgba(238,233,233,0.76)
+
+
+}
+
+#page > header {
+  grid-area: head;
+  background-color: rgba(254,202,112,.75);
+  padding:1em;
+  line-height:1.5em;
+  border-radius: 1em;
+}
+
+#page > ul {
+    grid-area: nav;
+	background-color: rgba(255,84,109,.8);
+	list-style-type: none;
+	text-decoration:none;
+	width: auto;
+	padding:1em;
+	border-radius: 1em;
+	position:inherit;
+	}
+
+
+	
+
+#page > main {
+  grid-area: main;
+  
+  margin-right: 4em;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: rgba(216,253,153,.5) ;
+  text-align: center;
+  padding: 1em;
+  border-radius: 1em;
+ }
+body {
+	background-image: url("background-2089307.jpg");
+	font-family: 'Tenor Sans', sans-serif;
+	text-decoration:none;}
+	
+#section {
+		
+		line-height: 2em;
+		padding:1em;
+	}
+
+
+#header, #nav, .noprint {display: none;
+	
+	width: 100%; margin: 0; float: none;
+
+	a:link, a:visited color: #781351;
+	}
+/* Change text colour to black (useful for light text on a dark background) */
+.lighttext
+{
+color: #000;
+	}
